@@ -1,0 +1,10 @@
+USE csrf;
+
+CREATE TABLE users(
+	user_id INT(8) PRIMARY KEY AUTO_INCREMENT,
+	mail VARCHAR(128) NOT NULL UNIQUE,
+	password VARCHAR(64) NOT NULL);
+CREATE TABLE money(
+	user_id INT(8) PRIMARY KEY,
+	money BIGINT NOT NULL DEFAULT 0,
+	FOREIGN KEY(user_id) REFERENCES users(user_id));

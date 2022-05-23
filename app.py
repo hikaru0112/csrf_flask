@@ -43,6 +43,7 @@ def payment():
    cur.close()
    cur = conn.cursor()
    print(user_id)
+   # ログイン情報が存在しない場合
    if not user_id:
          sql = "INSERT INTO users(mail, password) VALUES(%s, %s)"
          cur.execute(sql, (mail,pw))
@@ -96,7 +97,7 @@ def transfer():
       return redirect("/payment")
    return 
 
-
+#postメソッド出なかった場合
 @app.route("/payment")
 def paymentnoP():
    if not session:

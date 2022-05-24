@@ -21,6 +21,8 @@ docker-compose up --build
 
 攻撃用HTMLは`./attack`に格納しています。
 
+`LiveServer` などを使ってオリジンを切り離して実行してください。
+
 `attack.html` HTMLのフォームを使った攻撃方法です
 
 `attack2.html` JavaScriptを使った攻撃方法です(自分の環境では動作不能)
